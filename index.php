@@ -22,4 +22,4 @@ $person = [
     'age' => 21,
 ];
 
-echo $person['surname'];
+echo $person['name'];
