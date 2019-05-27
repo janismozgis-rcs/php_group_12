@@ -1,25 +1,21 @@
 <?php
+require_once 'helper.php';
 
-$someNumber = 123; // integer
-$someFloat = 3.14; // float
-$someText = 'foo 
-bar 
-baz'; // string
-$someText2 = "foo bar baz";
-$someTrue = true; // bool
-$someNothing = null;
+require_once 'components/header.php';
 
-$someNumber = 321;
+$page = isset($_GET['page']) ? $_GET['page'] : false;
+switch ($page) {
+    case(1);
+        require_once 'pages/page1.php';
+        break;
+    case(2);
+        require_once 'pages/page2.php';
+        break;
+    case(3);
+        require_once 'pages/page3.php';
+        break;
+    default:
+        require_once 'pages/landing.php';
+}
 
-$someCars = ['zaz', 'gaz', 'uaz', 'vaz', 'maz', 'bmw']; // array
-// $someCars = array(1, 2, 3);
-echo $someCars[2] . '<br>';
-echo $someCars[5] . '<br>';
-
-$person = [
-    'name' => 'John',
-    'surname' => 'Doe',
-    'age' => 21,
-];
-
-echo $person['name'];
+require_once 'components/footer.php';
