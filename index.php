@@ -14,6 +14,9 @@ switch ($page) {
     case(3);
         require_once 'pages/page3.php';
         break;
+    case('registration');
+        require_once 'pages/registration.php';
+        break;
     default:
         require_once 'pages/landing.php';
 }
